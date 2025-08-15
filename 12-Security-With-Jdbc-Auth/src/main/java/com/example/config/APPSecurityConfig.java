@@ -19,7 +19,7 @@ public class APPSecurityConfig {
     private static final String ADMIN = "ADMIN";
     private static final String USER = "USER";
 
-    // Password Encoder Bean
+  
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();

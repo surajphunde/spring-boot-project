@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Ticket Booking Result</title>
+</head>
+<body>
+    <div class="container">
+		<a href="book-ticket" class="btn btn-primary">Book Ticket</a>
+        <table class="table table-sm table-bordered table-striped">
+            <thead>
+                <th>ticketNbr</th>
+                <th>name</th>
+                <th>age</th>
+                <th>email</th>
+                <th>bookingStatus</th>
+            </thead>
+            <tbody>
+                <tr th:each="t : ${tickets}">
+                    <td th:text="${t.tickerNbr}"></td>
+                    <td th:text="${t.name}"></td>
+                    <td th:text="${t.age}"></td>
+                    <td th:text="${t.email}"></td>
+                    <td th:text="${t.bookingStatus}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
