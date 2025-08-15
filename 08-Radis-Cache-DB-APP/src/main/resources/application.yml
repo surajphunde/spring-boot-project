@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: 08-Radis-Cache-DB-APP
+
+  data:
+    redis:
+      host: redis-17118.crce179.ap-south-1-1.ec2.redns.redis-cloud.com
+      port: 17118
+      username: default
+      password: LTUSuJpgZ7U9LDesDypnu6RCsqgi882r
+      client-name: redis-client
+      client-type: lettuce
+      lettuce:
+        ssl: true
+
+server:
+  port: 9090
