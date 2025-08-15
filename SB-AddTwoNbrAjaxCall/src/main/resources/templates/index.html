@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Two Numbers</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#addForm').submit(function(event) {
+                event.preventDefault();
+                var num1 = $('#num1').val();
+                var num2 = $('#num2').val();
+                $.ajax({
+                    url: '/add',
+                    type: 'GET',
+                    data: {
+                        num1: num1,
+                        num2: num2
+                    },
+                    success: function(result) {
+                        $('#result').text('Result: ' + result);
+                    },
+                    error: function() {
+                        alert('Error in calculation');
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>Add Two Numbers</h2>
+    <form id="addForm">
+        <input type="number" id="num1" placeholder="Enter first number" required>
+        <input type="number" id="num2" placeholder="Enter second number" required>
+        <button type="submit">Add</button>
+    </form>
+    <p id="result"></p>
+</body>
+</html>
