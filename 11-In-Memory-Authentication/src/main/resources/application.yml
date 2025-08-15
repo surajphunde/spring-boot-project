@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: 11-In-Memory-Authentication
+
+server:
+    port: 9090
+
