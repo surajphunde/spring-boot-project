@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: 10-Spring-Security-Basic
+  security:
+    user:
+      name: suraj
+      password: 12345
+
+server:
+  port: 9090
